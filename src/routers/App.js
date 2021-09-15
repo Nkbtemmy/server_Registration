@@ -9,7 +9,6 @@ export default class App extends Component {
            <Router >
                 <Switch>
                   <Route path="/" exact component={Page} />  
-                  <Route path="*" component={Page} />  
                 </Switch>
           </Router>    
       </div>
