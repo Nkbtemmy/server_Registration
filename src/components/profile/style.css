@@ -1,0 +1,30 @@
+.flex-container{
+	width: 80%;
+	min-height: 100px;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */		
+	display: flex; /* Standard syntax */
+}
+.flex-container .column{
+	/* display: inline;
+	width: 250px; */
+	padding: 10px;
+	/* background: #dbdfe5; */
+	-webkit-flex: 1; /* Safari */
+	-ms-flex: 1; /* IE 10 */
+	flex: 1; /* Standard syntax */
+}
+.flex-container .column img{
+    width: 150px;
+}
+@media screen and (max-width: 780px) {
+	.flex-container .column{   
+        text-align: -webkit-center;
+	}
+	.flex-container .column img{
+		display: flex;
+		align-items: center;
+		text-align: center;
+	}
+  }
+

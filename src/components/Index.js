@@ -1,34 +1,26 @@
 import React, { Component } from 'react'
-import Dropzone from './dropzone/Dropzone';
+import Profile from './profile/Profile'
+import Dropzone from './dropzone/Dropzone'
+import Server from './server/Server'
+import Theme from './theme/Theme'
+import Preview from './preview/Preview'
 import './style.css'
 
 export default class Index extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            email: '',
-            password: '',
-            fireErrors: '',
-            userDetails:"",
-            emailError:'',
-            passwordError:'',
-        };
-            this.baseState = {emailError:'',passwordError:'' }
-        }
     
-    reset = () => {
-        this.setState(this.baseState)
-    }
-    handleChange = e => {
-        this.setState({[e.target.name]: e.target.value});
-    }
     upload = () =>{
         document.getElementById("myfile").click();
     }
     render() {
         return (
             <div className="mx-5 px-5 ">
+                    <Profile />
+                    <Server />
+                    <Dropzone />
+                    <Theme />
+                    <Preview />
 
+{/* 
                 <div>
                     <h2 className=" text-secondary">Create Profile</h2>
                     <div className="flex-container">
@@ -58,9 +50,8 @@ export default class Index extends Component {
                 </div>
 
                 <div>
-                    <h2 className="pt-5 text-secondary">Pre Sets <span className="float-right"><button><i className="fa fa-repeat" aria-hidden="true"></i></button></span></h2>     
                     <div>
- 
+                        <h2 className="pt-5 text-secondary">Pre Sets <span className="float-right"><button><i className="fa fa-repeat" aria-hidden="true"></i></button></span></h2>     
                         <input type="radio" onChange={this.handleChange} name="preset" className="btn-check " name="options" id="option4" autoComplete="off" />
                         <label className="btn btn-secondary" htmlFor="option4">Radio</label>
 
@@ -84,7 +75,6 @@ export default class Index extends Component {
                         <h2 className="pt-5 text-secondary">Themes <span className="float-right"><button><i className="fa fa-repeat" aria-hidden="true"></i></button></span></h2>     
                         <input type="color" onChange={this.handleChange} name="theme" className="form-control form-control-color w-100" id="ColorInput" title="Choose your color" />
                         <div className="pt-3">
-
                             <input type="radio" onChange={this.handleChange} name="themes" className="btn-check " name="options" id="option4" autoComplete="on" />
                             <label className="btn btn-secondary" htmlFor="option1">Radio</label>
 
@@ -124,6 +114,7 @@ export default class Index extends Component {
                        </div>
                     </div>
                 </div>
+             */}
             </div>
         )
     }

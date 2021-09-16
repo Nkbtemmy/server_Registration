@@ -119,6 +119,7 @@ const Dropzone = () => {
         reader.onload = function(e) {
             modalImageRef.current.style.backgroundImage = `url(${e.target.result})`;
         }
+        
     }
 
     const closeModal = () => {
